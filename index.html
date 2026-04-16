@@ -889,12 +889,10 @@
 
         tableBody.innerHTML = courses
           .map(function (c) {
-            var delBtn = deletingIds.has(String(c.id))
-              ? '<span class="spinner" style="border-top-color:#991B1B;width:13px;height:13px;border-width:2px;"></span>'
-              : "Remove";
+            var escapedId = esc(c.id);
             return (
               '<tr data-id="' +
-              esc(c.id) +
+              escapedId +
               '">' +
               '<td class="td-name" title="' +
               esc(c.name) +
@@ -919,15 +917,14 @@
               "</td>" +
               '<td class="td-actions">' +
               '<button class="btn-edit" onclick="openEdit(\'' +
-              esc(c.id) +
+              escapedId +
               "')\">&#9998; Edit</button>" +
               '<button class="btn-danger" onclick="handleDelete(\'' +
-              esc(c.id) +
+              escapedId +
               '\')" id="del-' +
-              esc(c.id) +
+              escapedId +
               '">' +
-              delBtn +
-              "</button>" +
+              "Remove</button>" +
               "</td></tr>"
             );
           })
