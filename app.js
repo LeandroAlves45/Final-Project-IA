@@ -86,6 +86,42 @@ app.get('/api/courses/stats', (req, res) => {
     }
 });
 
+// GET search courses
+app.get('/api/courses/search', (req, res) => {
+    try {
+        const query = req.query.q;
+
+        if (!query || !query.trim()) {
+            return res.status(400).json({
+                success: false,
+                error: 'Search query parameter "q" is required'
+            });
+        }
+
+        const searchTerm = query.trim().toLowerCase();
+        const courses = loadCourses();
+        const results = courses.filter(course => {
+            return (
+                course.name.toLowerCase().includes(searchTerm) ||
+                course.description.toLowerCase().includes(searchTerm) ||
+                course.status.toLowerCase().includes(searchTerm)
+            );
+        });
+
+        res.status(200).json({
+            success: true,
+            query: query.trim(),
+            count: results.length,
+            courses: results
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            error: `Failed to search courses: ${error.message}`
+        });
+    }
+});
+
 // GET specific course
 app.get('/api/courses/:id', (req, res) => {
     try {
