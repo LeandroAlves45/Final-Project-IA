@@ -1,0 +1,73 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#609ff9",
+    "activityBar.background": "#609ff9",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#fee0ec",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#609ff9",
+    "statusBar.background": "#2f81f7",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#609ff9",
+    "statusBarItem.remoteBackground": "#2f81f7",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#2f81f7",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#2f81f799",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+
+  "peacock.color": "#2F81F7",
+
+  "smoothtype.enabled": true,
+  "smoothtype.cursorBlinkAnimation": true,
+
+  "js/ts.preferences.importModuleSpecifier": "shortest",
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+
+  "editor.fontFamily": "JetBrains Mono, Fira Code, monospace",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 22,
+  "editor.fontLigatures": true,
+  "editor.rulers": [90],
+
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+
+  "editor.minimap.enabled": false,
+  "editor.guides.indentation": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.renderWhitespace": "selection",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.wordWrap": "off",
+  "editor.stickyScroll.enabled": true,
+
+  "breadcrumbs.enabled": true,
+
+  "files.autoSave": "afterDelay",
+
+  "workbench.iconTheme": "material-icon-theme",
+
+  "errorLens.enabled": true,
+
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "snyk.advanced.organization": "940f9760-aa31-4386-9b51-3eda1a65ab52",
+  "snyk.advanced.autoSelectOrganization": false
+}
